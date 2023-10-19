@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario con Tailwind y JS</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="shortcut icon" href="./img/shop.png" type="image/x-icon">
+    </head>
+    <body class="bg-gray-200 flex items-center justify-center h-screen m-24 font-sans">
+        <style>
+            /* width */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #2b2978;
+                border-radius: 5px;
+            }
+
+        </style>
+
+        <div class="bg-white p-4 shadow-md w-3/4 rounded-xl">
+
+            <img src="./img/shop.png" class="w-24 flex mx-auto mt-8 ">
+            <form class="flex flex-wrap justify-between mt-12" method="POST" action="https://sheetdb.io/api/v1/yojbc0mbworjg"> 
+                <input type="text" name="data[Vendedor]" name="apellido" class="w-2/5 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" required>
+                <input type="password" name="data[Contraseña]" name="apellido" class="w-2/5 px-3 py-2 border rounded shadow appearance-none" placeholder="Contraseña" required>
+                <input type="text" id="myInput" name="data[Numero de Productos]" name="apellido" class="w-1/6 px-3 py-2 border rounded shadow appearance-none" placeholder="#Productos" required>
+                
+                <div class="w-full mt-6">
+
+                    <div id="prod1" class="flex flex-row flex-wrap w-full justify-between hidden">
+                        <h2 class="w-full p-2 text-lg">Producto 1</h2>
+                        <input type="text" name="data[Producto 1 Nombre]"       class=" w-1/2 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
+                        <input type="text" name="data[Producto 1 Precio]"       class=" w-1/5 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+                        <p id="total1">$0</p>
+                        <input type="text" name="data[Producto 1 Descripcion]"  class=" w-full px-3 py-2 border mt-3 rounded shadow appearance-none" placeholder="Descripción" >
+                    </div>
+
+                    <div id="prod2" class="flex flex-row flex-wrap w-full justify-between hidden">
+                        <h2 class="w-full p-2 text-lg mt-6">Producto 2</h2>
+                        <input type="text" name="data[Producto 2 Nombre]"       class=" w-3/4 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
+                        <input type="text" name="data[Producto 2 Precio]"       class=" w-1/5 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+                        <input type="text" name="data[Producto 2 Descripcion]"  class=" w-full px-3 py-2 border mt-3 rounded shadow appearance-none" placeholder="Descripción" >
+                    </div>
+
+                    <div id="prod3" class="flex flex-row flex-wrap w-full justify-between hidden">
+                        <h2 class="w-full p-2 text-lg mt-6">Producto 3</h2>
+                        <input type="text" name="data[Producto 3 Nombre]"       class=" w-3/4 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
+                        <input type="text" name="data[Producto 3 Precio]"       class=" w-1/5 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+                        <input type="text" name="data[Producto 3 Descripcion]"  class=" w-full px-3 py-2 border mt-3 rounded shadow appearance-none" placeholder="Descripción" >
+                    </div>
+
+
+
+                    
+                    <input type="text" name="data[Producto 4]"  id="prod4"  name="apellido" class="hidden w-full px-3 py-2 border rounded shadow appearance-none" placeholder="Producto 4" >
+                    <input type="text" name="data[Producto 5]"  id="prod5"  name="apellido" class="hidden w-full px-3 py-2 border rounded shadow appearance-none" placeholder="Producto 5" >
+                    <input type="text" name="data[Producto 6]"  id="prod6"  name="apellido" class="hidden w-full px-3 py-2 border rounded shadow appearance-none" placeholder="Producto 6" >
+                    <input type="text" name="data[Producto 7]"  id="prod7"  name="apellido" class="hidden w-full px-3 py-2 border rounded shadow appearance-none" placeholder="Producto 7" >
+                    <input type="text" name="data[Producto 8]"  id="prod8"  name="apellido" class="hidden w-full px-3 py-2 border rounded shadow appearance-none" placeholder="Producto 8" >
+                    <input type="text" name="data[Producto 9]"  id="prod9"  name="apellido" class="hidden w-full px-3 py-2 border rounded shadow appearance-none" placeholder="Producto 9" >
+                    <input type="text" name="data[Producto 10]" id="prod10" name="apellido" class="hidden w-full px-3 py-2 border rounded shadow appearance-none" placeholder="Producto 10" >
+
+                </div>
+                <div class="w-full mx-auto"> 
+                    <button type="submit" class="flex flex-row bg-blue-500 hover:bg-blue-700 text-white mt-6 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-auto">Enviar</button> 
+                </div> 
+    
+            </form>
+
+            <script>
+                // Get the input element by its ID
+                const inputElement = document.getElementById('myInput');
+
+ 
+                
+                const prodId1  = document.getElementById('prod1');
+                const prodId2  = document.getElementById('prod2');
+                const prodId3  = document.getElementById('prod3');
+                const prodId4  = document.getElementById('prod4');
+                const prodId5  = document.getElementById('prod5'); 
+                const prodId6  = document.getElementById('prod6');
+                const prodId7  = document.getElementById('prod7');
+                const prodId8  = document.getElementById('prod8');
+                const prodId9  = document.getElementById('prod9');
+                const prodId10 = document.getElementById('prod10');
+                
+                const formArray = [prodId1, prodId2, prodId3, prodId4, prodId5, prodId6, prodId7, prodId8, prodId9, prodId10];
+
+
+
+
+
+
+                // Add an event listener to the input element
+
+                const form = document.querySelector('#myInput'); // Replace with the actual form ID or selector
+
+                    form.addEventListener('input', function(event){
+                        const precioValue = event.target.value;
+
+
+                    });
+
+                    form.addEventListener('input', function(event) {
+                        // Your event handling code here
+
+                        const inputValue = event.target.value;
+
+                        var n = inputValue;
+
+                        var changeId;
+
+                        for (let j = 0; j < 10; j++) {
+                            formArray[j].classList.add('hidden');
+                            console.log('added hidden to ${formArray[i]}');
+                        }
+
+                        for (let i = 0; i < n; i++) {
+                            
+                            changeId = formArray[i];
+                            changeId.classList.remove('hidden'); 
+
+                        }
+
+                        console.log('Input used:', inputValue);
+                });
+
+            </script>
+
+        </div>
+
+    </body>
+</html>
