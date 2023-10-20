@@ -6,10 +6,9 @@
         <title>Formulario con Tailwind y JS</title>
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
-        <link rel="favicon" href="./img/shop.png">
         <link rel="shortcut icon" href="./img/shop.png" type="image/x-icon">
     </head>
-    <body class="bg-gray-200 flex items-center justify-center h-screen m-24 font-sans">
+    <body class="bg-gray-200 flex items-center py-20 font-sans">
         <style>
             /* width */
             ::-webkit-scrollbar {
@@ -24,7 +23,7 @@
 
         </style>
 
-        <div class="bg-white p-4 shadow-md w-3/4 rounded-xl">
+        <div class="bg-white p-4 shadow-md w-3/4 rounded-xl mx-auto">
 
             <img src="./img/shop.png" class="w-24 flex mx-auto mt-8 ">
             <form class="flex flex-wrap justify-between mt-12" method="POST" action="https://sheetdb.io/api/v1/yojbc0mbworjg"> 
@@ -34,34 +33,179 @@
                 
                 <div class="w-full mt-6">
 
+                    <!-- ------------------------------------------------------------------------------------------------ -->
+
                     <div id="prod1" class="flex flex-row flex-wrap w-full justify-between hidden">
+
                         <h2 class="w-full p-2 text-lg">Producto 1</h2>
-                        <input type="text" name="data[Producto 1 Nombre]"       class=" w-1/2 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
-                        <input type="text" name="data[Producto 1 Precio]"       class=" w-1/5 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
-                        <p id="total1">$0</p>
+
+                        <input type="text" name="data[Producto 1 Nombre]" class=" w-1/2 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
+                        <input type="text" name="data[Producto 1 Precio]" id="precio1" class=" w-1/6 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+                        
+                        <div class="flex flex-row justify-start p-2 w-1/4 bg-teal-500">
+                            <p>Ganancia:</p>
+                            <p id="total1" class="ml-2 text-blue-900">$0</p>
+                        </div>
+
                         <input type="text" name="data[Producto 1 Descripcion]"  class=" w-full px-3 py-2 border mt-3 rounded shadow appearance-none" placeholder="Descripción" >
                     </div>
 
+                    <!-- ------------------------------------------------------------------------------------------------ -->
+
                     <div id="prod2" class="flex flex-row flex-wrap w-full justify-between hidden">
+
                         <h2 class="w-full p-2 text-lg mt-6">Producto 2</h2>
-                        <input type="text" name="data[Producto 2 Nombre]"       class=" w-3/4 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
-                        <input type="text" name="data[Producto 2 Precio]"       class=" w-1/5 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+
+                        <input type="text" name="data[Producto 2 Nombre]" class=" w-1/2 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
+                        <input type="text" name="data[Producto 2 Precio]" id="precio2" class=" w-1/6 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+                        
+                        <div class="flex flex-row justify-start p-2 w-1/4 bg-teal-500">
+                            <p>Ganancia:</p>
+                            <p id="total2" class="ml-2 text-blue-900">$0</p>
+                        </div>
+                        
                         <input type="text" name="data[Producto 2 Descripcion]"  class=" w-full px-3 py-2 border mt-3 rounded shadow appearance-none" placeholder="Descripción" >
                     </div>
 
+                    <!-- ------------------------------------------------------------------------------------------------ -->
+
                     <div id="prod3" class="flex flex-row flex-wrap w-full justify-between hidden">
+
                         <h2 class="w-full p-2 text-lg mt-6">Producto 3</h2>
-                        <input type="text" name="data[Producto 3 Nombre]"       class=" w-3/4 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
-                        <input type="text" name="data[Producto 3 Precio]"       class=" w-1/5 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+
+                        <input type="text" name="data[Producto 3 Nombre]" class=" w-1/2 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
+                        <input type="text" name="data[Producto 3 Precio]" id="precio3" class=" w-1/6 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+                        
+                        <div class="flex flex-row justify-start p-2 w-1/4 bg-teal-500">
+                            <p>Ganancia:</p>
+                            <p id="total3" class="ml-2 text-blue-900">$0</p>
+                        </div>
+                        
                         <input type="text" name="data[Producto 3 Descripcion]"  class=" w-full px-3 py-2 border mt-3 rounded shadow appearance-none" placeholder="Descripción" >
                     </div>
 
+                    <!-- ------------------------------------------------------------------------------------------------ -->
 
+                    <div id="prod4" class="flex flex-row flex-wrap w-full justify-between hidden">
 
+                        <h2 class="w-full p-2 text-lg mt-6">Producto 4</h2>
+
+                        <input type="text" name="data[Producto 4 Nombre]" class=" w-1/2 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
+                        <input type="text" name="data[Producto 4 Precio]" id="precio4" class=" w-1/6 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+                        
+                        <div class="flex flex-row justify-start p-2 w-1/4 bg-teal-500">
+                            <p>Ganancia:</p>
+                            <p id="total4" class="ml-2 text-blue-900">$0</p>
+                        </div>
+                        
+                        <input type="text" name="data[Producto 4 Descripcion]"  class=" w-full px-3 py-2 border mt-3 rounded shadow appearance-none" placeholder="Descripción" >
+                    </div>
+
+                    <!-- ------------------------------------------------------------------------------------------------ -->
+
+                    <div id="prod5" class="flex flex-row flex-wrap w-full justify-between hidden">
+
+                        <h2 class="w-full p-2 text-lg mt-6">Producto 5</h2>
+
+                        <input type="text" name="data[Producto 5 Nombre]" class=" w-1/2 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
+                        <input type="text" name="data[Producto 5 Precio]" id="precio5" class=" w-1/6 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+                        
+                        <div class="flex flex-row justify-start p-2 w-1/4 bg-teal-500">
+                            <p>Ganancia:</p>
+                            <p id="total5" class="ml-2 text-blue-900">$0</p>
+                        </div>
+                        
+                        <input type="text" name="data[Producto 5 Descripcion]"  class=" w-full px-3 py-2 border mt-3 rounded shadow appearance-none" placeholder="Descripción" >
+                    </div>
+
+                    <!-- ------------------------------------------------------------------------------------------------ -->
+
+                    <div id="prod6" class="flex flex-row flex-wrap w-full justify-between hidden">
+
+                        <h2 class="w-full p-2 text-lg mt-6">Producto 6</h2>
+
+                        <input type="text" name="data[Producto 6 Nombre]" class=" w-1/2 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
+                        <input type="text" name="data[Producto 6 Precio]" id="precio6" class=" w-1/6 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+                        
+                        <div class="flex flex-row justify-start p-2 w-1/4 bg-teal-500">
+                            <p>Ganancia:</p>
+                            <p id="total6" class="ml-2 text-blue-900">$0</p>
+                        </div>
+                        
+                        <input type="text" name="data[Producto 6 Descripcion]"  class=" w-full px-3 py-2 border mt-3 rounded shadow appearance-none" placeholder="Descripción" >
+                    </div>
+
+                    <!-- ------------------------------------------------------------------------------------------------ -->
+
+                    <div id="prod7" class="flex flex-row flex-wrap w-full justify-between hidden">
+
+                        <h2 class="w-full p-2 text-lg mt-6">Producto 7</h2>
+
+                        <input type="text" name="data[Producto 7 Nombre]" class=" w-1/2 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
+                        <input type="text" name="data[Producto 7 Precio]" id="precio7" class=" w-1/6 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+                        
+                        <div class="flex flex-row justify-start p-2 w-1/4 bg-teal-500">
+                            <p>Ganancia:</p>
+                            <p id="total7" class="ml-2 text-blue-900">$0</p>
+                        </div>
+                        
+                        <input type="text" name="data[Producto 7 Descripcion]"  class=" w-full px-3 py-2 border mt-3 rounded shadow appearance-none" placeholder="Descripción" >
+                    </div>
+
+                    <!-- ------------------------------------------------------------------------------------------------ -->
+
+                    <div id="prod8" class="flex flex-row flex-wrap w-full justify-between hidden">
+
+                        <h2 class="w-full p-2 text-lg mt-6">Producto 8</h2>
+
+                        <input type="text" name="data[Producto 8 Nombre]" class=" w-1/2 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
+                        <input type="text" name="data[Producto 8 Precio]" id="precio8" class=" w-1/6 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+                        
+                        <div class="flex flex-row justify-start p-2 w-1/4 bg-teal-500">
+                            <p>Ganancia:</p>
+                            <p id="total8" class="ml-2 text-blue-900">$0</p>
+                        </div>
+                        
+                        <input type="text" name="data[Producto 8 Descripcion]"  class=" w-full px-3 py-2 border mt-3 rounded shadow appearance-none" placeholder="Descripción" >
+                    </div>
+
+                    <!-- ------------------------------------------------------------------------------------------------ -->
+
+                    <div id="prod9" class="flex flex-row flex-wrap w-full justify-between hidden">
+
+                        <h2 class="w-full p-2 text-lg mt-6">Producto 9</h2>
+
+                        <input type="text" name="data[Producto 9 Nombre]" class=" w-1/2 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
+                        <input type="text" name="data[Producto 9 Precio]" id="precio9" class=" w-1/6 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+                        
+                        <div class="flex flex-row justify-start p-2 w-1/4 bg-teal-500">
+                            <p>Ganancia:</p>
+                            <p id="total9" class="ml-2 text-blue-900">$0</p>
+                        </div>
+                        
+                        <input type="text" name="data[Producto 9 Descripcion]"  class=" w-full px-3 py-2 border mt-3 rounded shadow appearance-none" placeholder="Descripción" >
+                    </div>
+
+                    <!-- ------------------------------------------------------------------------------------------------ -->
+
+                    <div id="prod10" class="flex flex-row flex-wrap w-full justify-between hidden">
+
+                        <h2 class="w-full p-2 text-lg mt-6">Producto 10</h2>
+
+                        <input type="text" name="data[Producto 10 Nombre]" class=" w-1/2 px-3 py-2 border rounded shadow appearance-none" placeholder="Nombre" >
+                        <input type="text" name="data[Producto 10 Precio]" id="precio10" class=" w-1/6 px-3 py-2 border rounded shadow appearance-none" placeholder="Precio" >
+                        
+                        <div class="flex flex-row justify-start p-2 w-1/4 bg-teal-500">
+                            <p>Ganancia:</p>
+                            <p id="total10" class="ml-2 text-blue-900">$0</p>
+                        </div>
+                        
+                        <input type="text" name="data[Producto 10 Descripcion]"  class=" w-full px-3 py-2 border mt-3 rounded shadow appearance-none" placeholder="Descripción" >
+                    </div>
+
+                    <!-- ------------------------------------------------------------------------------------------------ -->
                     
-                    <input type="text" name="data[Producto 4]"  id="prod4"  name="apellido" class="hidden w-full px-3 py-2 border rounded shadow appearance-none" placeholder="Producto 4" >
-                    <input type="text" name="data[Producto 5]"  id="prod5"  name="apellido" class="hidden w-full px-3 py-2 border rounded shadow appearance-none" placeholder="Producto 5" >
-                    <input type="text" name="data[Producto 6]"  id="prod6"  name="apellido" class="hidden w-full px-3 py-2 border rounded shadow appearance-none" placeholder="Producto 6" >
+
                     <input type="text" name="data[Producto 7]"  id="prod7"  name="apellido" class="hidden w-full px-3 py-2 border rounded shadow appearance-none" placeholder="Producto 7" >
                     <input type="text" name="data[Producto 8]"  id="prod8"  name="apellido" class="hidden w-full px-3 py-2 border rounded shadow appearance-none" placeholder="Producto 8" >
                     <input type="text" name="data[Producto 9]"  id="prod9"  name="apellido" class="hidden w-full px-3 py-2 border rounded shadow appearance-none" placeholder="Producto 9" >
@@ -94,43 +238,201 @@
                 const formArray = [prodId1, prodId2, prodId3, prodId4, prodId5, prodId6, prodId7, prodId8, prodId9, prodId10];
 
 
+                const form = document.querySelector('#myInput'); // Replace with the actual form ID or selector
+
+                form.addEventListener('input', function(event) {
+                    // Your event handling code here
+
+                    const inputValue = event.target.value;
+
+                    var n = inputValue;
+
+                    var changeId;
+
+                    for (let j = 0; j < 10; j++) {
+                        formArray[j].classList.add('hidden');
+                        console.log('added hidden to ${formArray[i]}');
+                    }
+
+                    for (let i = 0; i < n; i++) {
+                        
+                        changeId = formArray[i];
+                        changeId.classList.remove('hidden'); 
+
+                    }
+
+                    console.log('Input used:', inputValue);
+                });
+
+                //----------------------------------------------------
+
+                const precio1 = document.querySelector('#precio1'); // Replace with the actual form ID or selector
+                const total1 = document.querySelector('#total1'); // Replace with the actual form ID or selector
+
+                precio1.addEventListener('input', function(event) {
+                    // Your event handling code here
+                    const ganancia1 = event.target.value;
 
 
 
+                    ganTot = parseFloat((ganancia1 * 0.877).toFixed(2));
+
+                    total1.innerHTML = "$" + (ganTot);
+
+                    if(ganancia1 == ""){
+                        total1.innerHTML = "$0";
+                    }
+                });
+
+                //----------------------------------------------------
+
+                const precio2 = document.querySelector('#precio2'); // Replace with the actual form ID or selector
+                const total2 = document.querySelector('#total2'); // Replace with the actual form ID or selector
+
+                precio2.addEventListener('input', function(event) {
+                    // Your event handling code here
+                    const ganancia2 = event.target.value;
+
+                    total2.innerHTML = "$" + (ganancia2 * 0.877);
+
+                    if(ganancia2 == ""){
+                        total2.innerHTML = "$0";
+                    }
+                });
+
+                //----------------------------------------------------
+
+                const precio3 = document.querySelector('#precio3'); // Replace with the actual form ID or selector
+                const total3 = document.querySelector('#total3'); // Replace with the actual form ID or selector
+
+                precio3.addEventListener('input', function(event) {
+                    // Your event handling code here
+                    const ganancia3 = event.target.value;
+
+                    total3.innerHTML = "$" + (ganancia3 * 0.877);
+
+                    if(ganancia3 == ""){
+                        total3.innerHTML = "$0";
+                    }
+                });
+
+                //----------------------------------------------------
+
+                const precio4 = document.querySelector('#precio4'); // Replace with the actual form ID or selector
+                const total4 = document.querySelector('#total4'); // Replace with the actual form ID or selector
+
+                precio4.addEventListener('input', function(event) {
+                    // Your event handling code here
+                    const ganancia4 = event.target.value;
+
+                    total4.innerHTML = "$" + (ganancia4 * 0.877);
+
+                    if(ganancia4 == ""){
+                        total4.innerHTML = "$0";
+                    }
+                });
+
+                //----------------------------------------------------
+
+                const precio5 = document.querySelector('#precio5'); // Replace with the actual form ID or selector
+                const total5 = document.querySelector('#total5'); // Replace with the actual form ID or selector
+
+                precio5.addEventListener('input', function(event) {
+                    // Your event handling code here
+                    const ganancia5 = event.target.value;
+
+                    total5.innerHTML = "$" + (ganancia5 * 0.877);
+
+                    if(ganancia5 == ""){
+                        total5.innerHTML = "$0";
+                    }
+                });
+
+                //----------------------------------------------------
+
+                const precio6 = document.querySelector('#precio6'); // Replace with the actual form ID or selector
+                const total6 = document.querySelector('#total6'); // Replace with the actual form ID or selector
+
+                precio6.addEventListener('input', function(event) {
+                    // Your event handling code here
+                    const ganancia6 = event.target.value;
+
+                    total6.innerHTML = "$" + (ganancia6 * 0.877);
+
+                    if(ganancia6 == ""){
+                        total6.innerHTML = "$0";
+                    }
+                });
+
+                //----------------------------------------------------
+
+                const precio7 = document.querySelector('#precio7'); // Replace with the actual form ID or selector
+                const total7 = document.querySelector('#total7'); // Replace with the actual form ID or selector
+
+                precio7.addEventListener('input', function(event) {
+                    // Your event handling code here
+                    const ganancia7 = event.target.value;
+
+                    total7.innerHTML = "$" + (ganancia7 * 0.877);
+
+                    if(ganancia7 == ""){
+                        total7.innerHTML = "$0";
+                    }
+                });
+
+                //----------------------------------------------------
+
+                const precio8 = document.querySelector('#precio8'); // Replace with the actual form ID or selector
+                const total8 = document.querySelector('#total8'); // Replace with the actual form ID or selector
+
+                precio8.addEventListener('input', function(event) {
+                    // Your event handling code here
+                    const ganancia8 = event.target.value;
+
+                    total8.innerHTML = "$" + (ganancia8 * 0.877);
+
+                    if(ganancia8 == ""){
+                        total8.innerHTML = "$0";
+                    }
+                });
+
+                //----------------------------------------------------
+
+                const precio9 = document.querySelector('#precio9'); // Replace with the actual form ID or selector
+                const total9 = document.querySelector('#total9'); // Replace with the actual form ID or selector
+
+                precio9.addEventListener('input', function(event) {
+                    // Your event handling code here
+                    const ganancia9 = event.target.value;
+
+                    total9.innerHTML = "$" + (ganancia9 * 0.877);
+
+                    if(ganancia9 == ""){
+                        total9.innerHTML = "$0";
+                    }
+                });
+
+                //----------------------------------------------------
+
+                const precio10 = document.querySelector('#precio10'); // Replace with the actual form ID or selector
+                const total10 = document.querySelector('#total10'); // Replace with the actual form ID or selector
+
+                precio10.addEventListener('input', function(event) {
+                    // Your event handling code here
+                    const ganancia10 = event.target.value;
+
+                    total10.innerHTML = "$" + (ganancia10 * 0.877);
+
+                    if(ganancia10 == ""){
+                        total10.innerHTML = "$0";
+                    }
+                });
+
+                //----------------------------------------------------
 
                 // Add an event listener to the input element
 
-                const form = document.querySelector('#myInput'); // Replace with the actual form ID or selector
-
-                    form.addEventListener('input', function(event){
-                        const precioValue = event.target.value;
-
-
-                    });
-
-                    form.addEventListener('input', function(event) {
-                        // Your event handling code here
-
-                        const inputValue = event.target.value;
-
-                        var n = inputValue;
-
-                        var changeId;
-
-                        for (let j = 0; j < 10; j++) {
-                            formArray[j].classList.add('hidden');
-                            console.log('added hidden to ${formArray[i]}');
-                        }
-
-                        for (let i = 0; i < n; i++) {
-                            
-                            changeId = formArray[i];
-                            changeId.classList.remove('hidden'); 
-
-                        }
-
-                        console.log('Input used:', inputValue);
-                });
+                
 
             </script>
 
